@@ -1,0 +1,74 @@
+============================================================
+  CLASSIFICATION REPORT — Random Forest Rolling Yearly
+============================================================
+
+Test Year: 2021 | Threshold: 0.58
+----------------------------------------
+              precision    recall  f1-score   support
+
+      SL (0)       0.60      1.00      0.75     14414
+      TP (1)       0.60      0.00      0.00      9733
+
+    accuracy                           0.60     24147
+   macro avg       0.60      0.50      0.37     24147
+weighted avg       0.60      0.60      0.45     24147
+
+
+Test Year: 2022 | Threshold: 0.6
+----------------------------------------
+              precision    recall  f1-score   support
+
+      SL (0)       0.58      1.00      0.74     14256
+      TP (1)       0.67      0.00      0.00     10205
+
+    accuracy                           0.58     24461
+   macro avg       0.62      0.50      0.37     24461
+weighted avg       0.62      0.58      0.43     24461
+
+
+Test Year: 2023 | Threshold: 0.56
+----------------------------------------
+              precision    recall  f1-score   support
+
+      SL (0)       0.61      1.00      0.76     14272
+      TP (1)       0.50      0.00      0.01      9220
+
+    accuracy                           0.61     23492
+   macro avg       0.55      0.50      0.38     23492
+weighted avg       0.57      0.61      0.46     23492
+
+
+Test Year: 2024 | Threshold: 0.62
+----------------------------------------
+              precision    recall  f1-score   support
+
+      SL (0)       0.62      1.00      0.76     14728
+      TP (1)       0.57      0.00      0.00      9067
+
+    accuracy                           0.62     23795
+   macro avg       0.59      0.50      0.38     23795
+weighted avg       0.60      0.62      0.47     23795
+
+
+Test Year: 2025 | Threshold: 0.61
+----------------------------------------
+              precision    recall  f1-score   support
+
+      SL (0)       0.61      1.00      0.76     15131
+      TP (1)       0.55      0.00      0.00      9744
+
+    accuracy                           0.61     24875
+   macro avg       0.58      0.50      0.38     24875
+weighted avg       0.58      0.61      0.46     24875
+
+============================================================
+AGREGAT (semua tahun)
+----------------------------------------
+              precision    recall  f1-score   support
+
+      SL (0)       0.60      1.00      0.75     72801
+      TP (1)       0.56      0.00      0.00     47969
+
+    accuracy                           0.60    120770
+   macro avg       0.58      0.50      0.38    120770
+weighted avg       0.59      0.60      0.45    120770

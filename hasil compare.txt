@@ -1,0 +1,106 @@
+PS C:\Users\Dayutirta\Pictures\Prototype Pribadi> python final.py
+=================================================================
+  FINAL EXPERIMENT — Skripsi
+  Anchored vs Rolling | Yearly vs Monthly | 7 Model
+=================================================================
+
+Dataset  : 145,827 baris | 46 fitur
+WR raw   : 39.95%  (breakeven: 50.00%)
+Rentang  : 2020-01-03 → 2025-12-31
+Seed     : 42 (reproducible)
+MIN_TRADES: 10 per window
+
+
+─────────────────────────────────────────────────────────────────
+  ANCHORED | YEARLY | 5 windows
+─────────────────────────────────────────────────────────────────
+  [LogisticReg ] Expect: +0.139 | WR:56.97% | AUC:0.543 | Tr/win: 653.2 | +:  4/5 | 2.6s
+  [LDA         ] Expect: +0.126 | WR:56.29% | AUC:0.542 | Tr/win: 130.0 | +:  3/5 | 1.6s
+  [RandomForest] Expect: +0.148 | WR:57.39% | AUC:0.545 | Tr/win:  55.8 | +:  3/5 | 91.2s
+  [ExtraTrees  ] Expect: +0.166 | WR:58.28% | AUC:0.543 | Tr/win:  32.2 | +:  3/5 | 46.3s
+  [MLP         ] Expect: +0.268 | WR:63.39% | AUC:0.532 | Tr/win:  14.0 | +:  3/5 | 15.9s
+  [LightGBM    ] Expect: +0.102 | WR:55.09% | AUC:0.534 | Tr/win: 806.4 | +:  3/5 | 9.9s
+  [XGBoost     ] Expect: +0.166 | WR:58.31% | AUC:0.534 | Tr/win:  65.0 | +:  3/5 | 14.3s
+
+─────────────────────────────────────────────────────────────────
+  ROLLING | YEARLY | 5 windows
+─────────────────────────────────────────────────────────────────
+  [LogisticReg ] Expect: +0.164 | WR:58.21% | AUC:0.543 | Tr/win:  23.6 | +:  3/5 | 2.3s
+  [LDA         ] Expect: +0.125 | WR:56.26% | AUC:0.542 | Tr/win: 112.6 | +:  4/5 | 1.1s
+  [RandomForest] Expect: +0.152 | WR:57.60% | AUC:0.544 | Tr/win:  27.4 | +:  4/5 | 62.0s
+  [ExtraTrees  ] Expect: +0.157 | WR:57.87% | AUC:0.543 | Tr/win:  56.8 | +:  2/5 | 16.1s
+  [MLP         ] Expect: +0.043 | WR:52.16% | AUC:0.530 | Tr/win: 241.0 | +:  2/5 | 13.7s
+  [LightGBM    ] Expect: +0.133 | WR:56.67% | AUC:0.535 | Tr/win: 589.0 | +:  3/5 | 10.8s
+  [XGBoost     ] Expect: +0.142 | WR:57.12% | AUC:0.535 | Tr/win: 336.0 | +:  3/5 | 11.6s
+
+─────────────────────────────────────────────────────────────────
+  ANCHORED | MONTHLY | 72 windows
+─────────────────────────────────────────────────────────────────
+  [LogisticReg ] Expect: +0.084 | WR:54.18% | AUC:0.538 | Tr/win: 137.1 | +: 39/72 | 35.3s
+  [LDA         ] Expect:-152.589 | WR:44.16% | AUC:0.537 | Tr/win:  32.7 | +: 30/72 | 17.0s
+  [RandomForest] Expect: +0.069 | WR:53.45% | AUC:0.542 | Tr/win: 170.4 | +: 36/72 | 970.2s
+  [ExtraTrees  ] Expect: +0.035 | WR:51.75% | AUC:0.541 | Tr/win: 220.0 | +: 26/72 | 203.6s
+  [MLP         ] Expect: +0.009 | WR:50.45% | AUC:0.527 | Tr/win:  42.5 | +: 28/72 | 141.8s
+  [LightGBM    ] Expect: +0.106 | WR:55.28% | AUC:0.533 | Tr/win: 139.8 | +: 37/72 | 104.8s
+  [XGBoost     ] Expect: +0.096 | WR:54.83% | AUC:0.533 | Tr/win: 134.6 | +: 41/72 | 145.3s
+
+─────────────────────────────────────────────────────────────────
+  ROLLING | MONTHLY | 70 windows
+─────────────────────────────────────────────────────────────────
+  [LogisticReg ] Expect: +0.068 | WR:53.38% | AUC:0.530 | Tr/win: 111.5 | +: 38/70 | 6.0s
+  [LDA         ] Expect: +0.030 | WR:51.52% | AUC:0.529 | Tr/win:  39.5 | +: 35/70 | 3.2s
+  [RandomForest] Expect: +0.034 | WR:51.71% | AUC:0.532 | Tr/win: 173.4 | +: 28/70 | 175.0s
+  [ExtraTrees  ] Expect: +0.035 | WR:51.75% | AUC:0.530 | Tr/win: 240.9 | +: 28/70 | 54.1s
+  [MLP         ] Expect: +0.033 | WR:51.66% | AUC:0.521 | Tr/win:  52.8 | +: 30/70 | 46.0s
+  [LightGBM    ] Expect: +0.023 | WR:51.14% | AUC:0.524 | Tr/win: 136.1 | +: 29/70 | 33.7s
+  [XGBoost     ] Expect: +0.038 | WR:51.88% | AUC:0.523 | Tr/win: 107.3 | +: 27/70 | 62.4s
+
+=================================================================
+  HASIL FINAL — HEAD-TO-HEAD
+=================================================================
+
+  Timeline   Model            Anchored    Rolling Pemenang
+  ───────────────────────────────────────────────────────
+  Yearly     RandomForest       +0.148     +0.152 Rolling
+  Yearly     LogisticReg        +0.139     +0.164 Rolling
+  Yearly     LDA                +0.126     +0.125 Anchored
+  Yearly     MLP                +0.268     +0.043 Anchored
+  Yearly     ExtraTrees         +0.166     +0.157 Anchored
+  Yearly     XGBoost            +0.166     +0.142 Anchored
+  Yearly     LightGBM           +0.102     +0.133 Rolling
+  Monthly    XGBoost            +0.096     +0.038 Anchored
+  Monthly    LogisticReg        +0.084     +0.068 Anchored
+  Monthly    LightGBM           +0.106     +0.023 Anchored
+  Monthly    RandomForest       +0.069     +0.034 Anchored
+  Monthly    LDA              -152.589     +0.030 Rolling
+  Monthly    MLP                +0.009     +0.033 Rolling
+  Monthly    ExtraTrees         +0.035     +0.035 Anchored
+
+=================================================================
+  RANKING OVERALL TOP 10
+=================================================================
+  #    Method     Timeline   Model            Expect      WR  Tr/win  Consist   Score
+  ──────────────────────────────────────────────────────────────────────
+  1    Rolling    Yearly     RandomForest     +0.152  57.60%    27.4   80.00%   0.314  ◄ TERBAIK
+  2    Anchored   Yearly     LogisticReg      +0.139  56.97%   653.2   80.00%   0.309
+  3    Rolling    Yearly     LDA              +0.125  56.26%   112.6   80.00%   0.303
+  4    Anchored   Yearly     MLP              +0.268  63.39%    14.0   60.00%   0.297
+  5    Anchored   Yearly     ExtraTrees       +0.166  58.28%    32.2   60.00%   0.259
+  6    Rolling    Yearly     LogisticReg      +0.164  58.21%    23.6   60.00%   0.258
+  7    Anchored   Yearly     XGBoost          +0.166  58.31%    65.0   60.00%   0.257
+  8    Anchored   Yearly     RandomForest     +0.148  57.39%    55.8   60.00%   0.252
+  9    Rolling    Yearly     XGBoost          +0.142  57.12%   336.0   60.00%   0.247
+  10   Rolling    Yearly     LightGBM         +0.133  56.67%   589.0   60.00%   0.244
+
+=================================================================
+  KESIMPULAN UNTUK SKRIPSI:
+    Metodologi terbaik : Rolling
+    Timeline terbaik   : Yearly
+    Model terbaik      : RandomForest
+    Expectancy         : +0.1519 per trade
+    Win Rate           : 57.60%
+    Trades per window  : 27.4
+    Konsistensi        : 80.00% periode positif
+=================================================================
+
+File: data/final_detail.csv | data/final_summary.csv
